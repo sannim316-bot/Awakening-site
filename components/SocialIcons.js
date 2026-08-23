@@ -9,15 +9,18 @@ const icons = {
       <circle cx="16.2" cy="7.8" r="0.9" />
     </>
   ),
-  twitter: (
-    <path d="M19 7.3c-.5.2-1 .4-1.6.5.6-.4 1-.9 1.2-1.6-.5.3-1.1.6-1.8.7A2.8 2.8 0 0 0 12 9c0 .2 0 .4.1.6-2.3-.1-4.4-1.2-5.7-2.9-.2.4-.4.9-.4 1.4 0 1 .5 1.8 1.2 2.3-.4 0-.9-.1-1.2-.3v.1c0 1.3 1 2.5 2.2 2.7-.2.1-.5.1-.8.1l-.5-.1c.4 1.1 1.4 1.9 2.7 1.9-1 .8-2.2 1.2-3.6 1.2H5c1.2.8 2.7 1.3 4.2 1.3 5.1 0 7.9-4.2 7.9-7.9v-.4c.5-.4 1-.9 1.4-1.4z" />
-  ),
   youtube: (
     <>
       <rect x="4.5" y="7" width="15" height="10" rx="2.6" fill="none" stroke="currentColor" strokeWidth="1.4" />
       <path d="M10.5 9.8l4 2.2-4 2.2z" />
     </>
   ),
+};
+
+const links = {
+  facebook: 'https://www.facebook.com/share/14mMnKwUfwT/',
+  instagram: 'https://www.instagram.com/household_of_light?igsi=MXIwNDdkdDk2aWV0NA==&utm_source=ig_contact_invite',
+  youtube: 'https://youtube.com/@thehouseholdnetwork?si=xp8N7HMMelZf9LP_',
 };
 
 export default function SocialIcons({ size = 'sm', className = '' }) {
@@ -27,7 +30,9 @@ export default function SocialIcons({ size = 'sm', className = '' }) {
       {Object.entries(icons).map(([name, path]) => (
         <a
           key={name}
-          href="#"
+          href={links[name]}
+          target="_blank"
+          rel="noopener noreferrer"
           aria-label={name}
           className={`${dims} flex items-center justify-center rounded-full border border-line text-parchment/70 transition-colors hover:border-gold hover:text-gold`}
         >
