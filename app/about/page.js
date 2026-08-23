@@ -43,7 +43,7 @@ export default function About() {
       <section className="border-t border-line px-6 py-20 md:px-10">
         <div className="mx-auto grid max-w-6xl gap-12 md:grid-cols-2 md:items-center">
           <div className="relative aspect-square overflow-hidden bg-ink-soft">
-  <img src="/pic2.jpg" alt="" className="absolute inset-0 h-full w-full object-cover" />
+  <img src="/about_us.PNG" alt="" className="absolute inset-0 h-full w-full object-cover" />
 </div>
           <div>
             <p className="mb-3 text-xs uppercase tracking-widest2 text-gold">Leadership</p>
