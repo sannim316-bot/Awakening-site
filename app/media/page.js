@@ -2,7 +2,7 @@ import SiteHeader from '@/components/SiteHeader';
 import Footer from '@/components/Footer';
 import PageBanner from '@/components/PageBanner';
 
-export const metadata = { title: 'Media — Awakening' };
+export const metadata = { title: 'Media — The Household' };
 
 const MESSAGES = [
   { title: 'Steady in the Waiting', tag: 'Psalms of Ascent · Pt. 4' },

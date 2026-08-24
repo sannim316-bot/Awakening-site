@@ -14,6 +14,14 @@ const NAV_LINKS = [
 
 export default function SiteHeader() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 40);
+    onScroll();
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
@@ -32,13 +40,23 @@ export default function SiteHeader() {
 
   return (
     <>
-      <header className="sticky top-0 z-40 flex items-center justify-between border-b border-line bg-ink px-6 py-4 md:px-10">
-        <Link href="/" className="flex items-center gap-3">
+      <header
+        className={`sticky top-0 z-40 flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-b border-line bg-ink px-4 transition-all duration-300 sm:px-6 md:px-10 ${
+          scrolled ? 'py-2' : 'py-4'
+        }`}
+      >
+        <Link href="/" className="flex shrink-0 items-center gap-3">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.png" alt="Awakening" className="h-24 w-auto md:h-24" />
+          <img
+            src="/logo.png"
+            alt="The Household"
+            className={`w-auto transition-all duration-300 ${
+              scrolled ? 'h-10 sm:h-12 md:h-14' : 'h-14 sm:h-16 md:h-20'
+            }`}
+          />
         </Link>
 
-        <div className="flex items-center gap-6">
+        <div className="flex shrink-0 items-center gap-4 sm:gap-6">
           <SocialIcons className="hidden sm:flex" />
           <div className="hidden h-6 w-px bg-line sm:block" />
           <button
@@ -57,24 +75,24 @@ export default function SiteHeader() {
       </header>
 
       <div
-        className={`fixed inset-0 z-50 bg-ink transition-opacity duration-500 ${
+        className={`fixed inset-0 z-50 overflow-y-auto bg-ink transition-opacity duration-500 ${
           open ? 'pointer-events-auto opacity-100' : 'pointer-events-none opacity-0'
         }`}
         aria-hidden={!open}
       >
-        <div className="flex items-center justify-between border-b border-line px-6 py-4 md:px-10">
+        <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 border-b border-line px-4 py-4 sm:px-6 md:px-10">
           {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src="/logo.png" alt="Awakening" className="h-24 w-auto md:h-24" />
+          <img src="/logo.png" alt="The Household" className="h-14 w-auto shrink-0 sm:h-16 md:h-20" />
           <button
             onClick={() => setOpen(false)}
-            className="flex items-center gap-2 text-sm uppercase tracking-widest2 text-parchment transition-colors hover:text-gold"
+            className="flex shrink-0 items-center gap-2 text-sm uppercase tracking-widest2 text-parchment transition-colors hover:text-gold"
           >
             Close
             <span className="text-lg leading-none">&times;</span>
           </button>
         </div>
 
-        <div className="mx-auto grid max-w-5xl gap-12 px-6 py-14 md:grid-cols-2 md:px-10 md:py-20">
+        <div className="mx-auto grid max-w-5xl gap-12 px-4 py-14 sm:px-6 md:grid-cols-2 md:px-10 md:py-20">
           <nav>
             <ul className="space-y-5">
               {NAV_LINKS.map((link, i) => (
@@ -97,18 +115,19 @@ export default function SiteHeader() {
             </ul>
           </nav>
 
-          <div className="space-y-8 self-end text-sm text-parchment/80">
+          <div className="space-y-8 self-end break-words text-sm text-parchment/80">
             <div>
               <p className="mb-2 font-semibold uppercase tracking-widest2 text-gold">Address</p>
-              <p>oko oba,<br />Agege</p>
+              <p>220001, Ile Ife,<br />Osun State, Nigeria, Africa.</p>
             </div>
             <div>
               <p className="mb-2 font-semibold uppercase tracking-widest2 text-gold">Email</p>
-              <p>awakening.com</p>
+              <p>thehousehold.light@gmail.com</p>
+              <p>www.thehousehold.org</p>
             </div>
             <div>
               <p className="mb-2 font-semibold uppercase tracking-widest2 text-gold">Contact</p>
-              <p>+234 901 234 5678</p>
+              <p>+234 704 1600 950</p>
             </div>
             <SocialIcons />
           </div>

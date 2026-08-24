@@ -2,7 +2,7 @@ import SiteHeader from '@/components/SiteHeader';
 import Footer from '@/components/Footer';
 import PageBanner from '@/components/PageBanner';
 
-export const metadata = { title: 'Giving — Awakening' };
+export const metadata = { title: 'Giving — The Household' };
 
 const METHODS = [
   { title: 'Online', body: 'Give a one-time or recurring gift securely by card or bank transfer.' },
@@ -17,7 +17,7 @@ export default function Giving() {
       <PageBanner
         eyebrow="Partner With Us"
         title="Give toward what God is building"
-        blurb="Every gift — large or small — helps fund our weekly gatherings, the discipleship school, and practical care for neighbors in need."
+        blurb="Every gift — large or small — helps fund our weekly gatherings, the Discovery Class, and practical care for neighbors in need."
       />
 
       <section className="px-6 py-20 md:px-10">

@@ -3,7 +3,7 @@ import Footer from '@/components/Footer';
 import PageBanner from '@/components/PageBanner';
 import ContactForm from '@/components/ContactForm';
 
-export const metadata = { title: 'Contact — Awakening' };
+export const metadata = { title: 'Contact — The Household' };
 
 export default function Contact() {
   return (
@@ -21,22 +21,26 @@ export default function Contact() {
             <div>
               <p className="mb-2 text-xs uppercase tracking-widest2 text-gold">Address</p>
               <p className="text-sm text-parchment/70">
-                Riverside Hall, 14 Meridian Way,
+                220001, Ile Ife,
                 <br />
-                Austin, TX 78701
+                Osun State, Nigeria, Africa.
               </p>
             </div>
             <div>
               <p className="mb-2 text-xs uppercase tracking-widest2 text-gold">Email</p>
-              <p className="text-sm text-parchment/70">hello@awakening.org</p>
+              <p className="text-sm text-parchment/70">thehousehold.light@gmail.com</p>
             </div>
             <div>
               <p className="mb-2 text-xs uppercase tracking-widest2 text-gold">Phone</p>
-              <p className="text-sm text-parchment/70">+1 (512) 555-0142</p>
+              <p className="text-sm text-parchment/70">+234 704 1600 950</p>
             </div>
             <div>
               <p className="mb-2 text-xs uppercase tracking-widest2 text-gold">Gathering Times</p>
-              <p className="text-sm text-parchment/70">Sundays, 9:30am &amp; 11:15am</p>
+              <p className="text-sm text-parchment/70">
+                Sundays, 9:00AM - 10:30AM
+                <br />
+                Fridays, 4:30PM - 7:00PM
+              </p>
             </div>
           </div>
 

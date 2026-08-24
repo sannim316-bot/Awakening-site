@@ -1,8 +1,8 @@
 import './globals.css';
 
 export const metadata = {
-  title: 'Awakening',
-  description: 'Rooted. Sent. Renewed. — Awakening is a community learning to follow Jesus together.',
+  title: 'The Household',
+  description: 'The Household — a place of encounter. A community and platform of Faith and life.',
 };
 
 export default function RootLayout({ children }) {

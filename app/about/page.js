@@ -2,7 +2,7 @@ import SiteHeader from '@/components/SiteHeader';
 import Footer from '@/components/Footer';
 import PageBanner from '@/components/PageBanner';
 
-export const metadata = { title: 'About — Awakening' };
+export const metadata = { title: 'About — The Household' };
 
 const VALUES = [
   {
