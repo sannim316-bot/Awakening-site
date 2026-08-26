@@ -130,7 +130,7 @@ export default function About() {
       <PageBanner
         eyebrow="Who We Are"
         title="The Household"
-        blurb="A family of faith sent to Osun State, Nigeria to the world to carry the light of God and equip people for life and kingdom service."
+        blurb="A family of faith sent through Osun State, Nigeria to the world to carry the light of God and equip people for life and kingdom service."
       />
 
       {/* About — anchoring scripture */}
