@@ -10,27 +10,39 @@ function Scripture({ reference, children, className = '' }) {
   return (
     <blockquote className={`border-l border-gold/40 pl-5 ${className}`}>
       <p className="mb-2 text-xs uppercase tracking-widest2 text-gold">{reference}</p>
-      <p className="text-sm italic leading-relaxed text-parchment/70">{children}</p>
+      <p className="whitespace-pre-line text-sm italic leading-relaxed text-parchment/70">
+        {children}
+      </p>
     </blockquote>
   );
 }
 
+const ACTS =
+  '[7]And upon the first day of the week, when the disciples came together to break bread, Paul preached unto them, ready to depart on the morrow; and continued his speech until midnight.\n[8]And there were many lights in the upper chamber, where they were gathered together.';
+
+const ISAIAH =
+  '[8]Thus saith the LORD, In an acceptable time have I heard thee, and in a day of salvation have I helped thee: and I will preserve thee, and give thee for a covenant of the people, to establish the earth, to cause to inherit the desolate heritages;\n[9]That thou mayest say to the prisoners, Go forth; to them that are in darkness, Shew yourselves. They shall feed in the ways, and their pastures shall be in all high places.';
+
 const MISSION = [
   {
+    letter: 'a',
     title: 'Emancipation',
-    body: 'Saving lost souls and territories through outreaches and evangelism.',
+    body: 'saving lost souls and territories through outreaches, and evangelism.',
   },
   {
+    letter: 'b',
     title: 'Preservation',
-    body: 'Preserving the faith and lives of people from perishability — the decline in quality of faith and life — through the renewal of the mind by the word of faith, and a commitment to helping people reach life’s standard of living in the assembly of faith.',
+    body: 'preserving faith and lives of people from perishability "decline in quality of Faith and Life" through renewal of mind by the word of Faith and commitment to helping people achieve life’s standard of living in the assembly of Faith.',
   },
   {
+    letter: 'c',
     title: 'Liberation',
-    body: 'To make people free by truth — a variety of knowledge — and standard education.',
+    body: 'To make people free by Truth (variety of knowledge) and standard education.',
   },
   {
+    letter: 'd',
     title: 'Unity',
-    body: 'Building an alliance network in and for the body of Christ, to establish faith-based systems and institutions on earth that preserve faith and life.',
+    body: 'building an alliance network in and for the body of Christ to establish Faith based systems and institutions on earth to preserve Faith and Life.',
   },
 ];
 
@@ -38,65 +50,77 @@ const MANDATE = [
   {
     title: 'To raise and preserve a people of faith for the coming of our Lord Jesus Christ.',
     reference: 'Luke 18:8',
-    text: 'I tell you that he will avenge them speedily. Nevertheless when the Son of man cometh, shall he find faith on the earth?',
+    text: '[8]I tell you that he will avenge them speedily. Nevertheless when the Son of man cometh, shall he find faith on the earth?',
     answer: 'Yes!',
   },
   {
-    title: 'To prepare the saints for Kingdom service and work.',
+    title: 'To prepare the Saint for kingdom service and work.',
     reference: '2 Timothy 3:17',
-    text: 'That the people of God may be perfect, thoroughly furnished unto all good works.',
+    text: '[17]That the people of God may be perfect, thoroughly furnished unto all good works.',
   },
   {
     title: 'To establish a family of God as a transgenerational preservation strategy.',
-    reference: 'Psalm 78:4-7',
-    text: 'We will not hide them from their children, shewing to the generation to come the praises of the LORD, and his strength, and his wonderful works that he hath done… That the generation to come might know them, even the children which should be born; who should arise and declare them to their children: that they might set their hope in God, and not forget the works of God, but keep his commandments.',
+    reference: 'Psalms 78:4-7',
+    text: '[4]We will not hide them from their children, shewing to the generation to come the praises of the LORD, and his strength, and his wonderful works that he hath done.\n[5]For he established a testimony in Jacob, and appointed a law in Israel, which he commanded our fathers, that they should make them known to their children:\n[6]That the generation to come might know them, even the children which should be born; who should arise and declare them to their children:\n[7]That they might set their hope in God, and not forget the works of God, but keep his commandments:',
   },
   {
-    title: 'To build unity systems for, and in, the body of Christ.',
-    lead: 'And so He gave us an apostolic and teaching ministry…',
+    title: 'To build unity systems for, and in the body of Christ.',
+    lead: 'And So, he gave us, an Apostolic and teaching ministry...',
     reference: 'Ephesians 4:12-13',
-    text: 'For the perfecting of the saints, for the work of the ministry, for the edifying of the body of Christ: till we all come in the unity of the faith, and of the knowledge of the Son of God, unto a perfect man, unto the measure of the stature of the fullness of Christ.',
+    text: '[12]For the perfecting of the saints, for the work of the ministry, for the edifying of the body of Christ:\n[13]Till we all come in the unity of the faith, and of the knowledge of the Son of God, unto a perfect man, unto the measure of the stature of the fullness of Christ:',
   },
   {
     title:
-      'To aid and pioneer territorial transformation, ushering in Kingdom governance and leadership towards the preservation of faith and life on earth.',
-    reference: 'Matthew 5:14-16',
-    text: 'Ye are the light of the world. A city that is set on an hill cannot be hid… Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.',
+      'To aid and pioneer territorial transformation and usher kingdom governance and leadership towards preservation of faith and life on earth.',
+    reference: 'Matthew 5:13-16',
+    text: '[13]Ye are the salt of the earth: but if the salt have lost his savour, wherewith shall it be salted? it is thenceforth good for nothing, but to be cast out, and to be trodden under foot of men.\n[14]Ye are the light of the world. A city that is set on an hill cannot be hid.\n[15]Neither do men light a candle, and put it under a bushel, but on a candlestick; and it giveth light unto all that are in the house.\n[16]Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.',
     also: {
-      reference: 'Matthew 28:19-20',
-      text: 'Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost: teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you alway, even unto the end of the world. Amen.',
+      reference: 'Matthew 28:18-20',
+      text: '[18]And Jesus came and spake unto them, saying, All power is given unto me in heaven and in earth.\n[19]Go ye therefore, and teach all nations, baptizing them in the name of the Father, and of the Son, and of the Holy Ghost:\n[20]Teaching them to observe all things whatsoever I have commanded you: and, lo, I am with you alway, even unto the end of the world. Amen.',
     },
   },
 ];
 
 const STORY = [
-  'Beyond the many personal encounters, experiences, visions, and revelations through which God has spoken and revealed His purposes to us, there is a story — a story of obedience, of divine sending, and of a burden for a people and a territory.',
-  'Our journey began in Ata, Ogun State, where Apostle Timothy Olugbenga, alongside Pastor Samuel Olawale, Pastor Israel Adebayo, Brother Temiloluwa Gboyega, and a few other brethren, were already serving together in fellowship and pursuing the purposes of God.',
-  'But the Lord began to speak concerning a greater assignment. God placed Osun State upon our hearts as a harvest field. We understood Osun to be a place of peace, a territory that would become our Jerusalem, and we received the command to carry the light of God into its towns, cities, and villages.',
+  'Beyond the many personal encounters, experiences, visions, and revelations through which God has spoken and revealed His purposes to us, there is a story, a story of obedience, divine sending, and a burden for a people and a territory.',
 ];
 
-const STORY_CONTINUED = [
-  'With faith in the word of the Lord, we went into Osun State, leaving what was familiar and embracing the territory to which God had sent us. We came with a burden for souls. We came with a passion to raise men. We came with a mandate to establish the light of God. And we came with a responsibility to preserve the territory entrusted to us.',
-  'Since then, the Lord has continued to lead us through different seasons of growth and challenge — fellowship, ministry, discipleship, prayer, evangelism, and the raising of people who will become expressions of Christ in their generation. What began as a simple response to a divine instruction has continued to grow into a wider Kingdom assignment.',
+const STORY_2 = [
+  'Our journey began in Atan, Ogun State, where Apostle Timothy Olugbenga, alongside Pastor Samuel Olawale, Pastor Israel Adebayo, Brother Temiloluwa Gboyega, and a few other brethren, were already serving together in fellowship and pursuing the purposes of God.',
+  'But the Lord began to speak concerning a greater assignment.',
+  'God placed Osun State, Nigeria upon our hearts as a harvest field. We understood Osun to be a place of peace, a territory that would become Our Jerusalem, and we received the command to carry the light of God into its towns, cities, and villages.',
+];
+
+const STORY_3 = [
+  'With faith in the word of the Lord, we went into Osun State, Nigeria, leaving what was familiar and embracing the territory to which God had sent us.',
+  'We came with a burden for souls, We came with a passion to raise men, We came with a mandate to establish the light of God, And we came with a responsibility to preserve the territory entrusted to us.',
+  'Since then, the Lord has continued to lead us through different seasons of growth, challenges, fellowship, ministry, discipleship, prayer, evangelism, and the raising of people who will become expressions of Christ in their generation.',
+  'What began as a simple response to a divine instruction has continued to grow into a wider Kingdom assignment.',
   'In the 2025–2026 season, the Lord brought us into a deeper dimension of commissioning into ministry, giving greater clarity to what He had begun. We became increasingly conscious that our presence in Osun was not accidental. We were not merely building a ministry in a particular location; we were responding to a divine assignment concerning a territory.',
 ];
 
 const CONVICTIONS = [
-  'We are sent to Osun.',
-  'We believe Osun is a harvest.',
-  'We believe Osun is our place of peace.',
-  'We believe the light of God must shine across its towns, villages, communities, and generations.',
-  'We believe men must be raised, families strengthened, communities transformed, and the purposes of God established.',
-  'We believe we have been entrusted with a preservation mandate — to stand in the place of light, truth, righteousness, and Kingdom influence for the sake of the territory.',
+  'We are sent to Osun State, Nigeria,',
+  'We believe Osun is a harvest,',
+  'We believe Osun is our place of peace,',
+  'We believe the light of God must shine across its towns, villages, communities, and generations,',
+  'We believe men must be raised, families strengthened, communities transformed, and the purposes of God established,',
+  'And we believe we have been entrusted with a preservation mandate, to stand in the place of light, truth, righteousness, and Kingdom influence for the sake of the territory.',
+];
+
+const STORY_CLOSE = [
+  'Our story is therefore not simply about where we came from or where we are today.',
+  'It is about why we are sent, It is a story of faith in God’s word.',
+  'A story of obedience to divine instruction, A story of a people responding to a harvest, A story that is still being written, And as we continue this journey, our prayer is that the light of God will shine brighter across Osun State, Nigeria to the world; that towns and villages will encounter Christ; that men and women will be transformed; that leaders will be raised; that families will be strengthened; and that the purposes of God concerning this territory will be fulfilled.',
 ];
 
 const LEADER = [
-  'Timothy Olugbenga is a lover of God and His Kingdom, a teacher of faith and life, and a passionate Kingdom establisher and advancer. He is committed to seeing people encounter God, discover their purpose, become equipped for life and Kingdom service, and participate meaningfully in God’s purposes on the earth.',
-  'Called and given to the ministry in his late teenage years, Timothy’s journey into ministry was marked by several profound experiences with God. Among these was a major encounter with Jesus in a trance-like experience, where he saw Jesus appear to him as Light. Through these and subsequent experiences, he received revelations concerning ministry, the Kingdom of God, and various expressions of God’s purpose for mankind and the earth.',
-  'These encounters birthed a strong burden in him to equip people and build systems that preserve and advance faith and life. His ministry therefore carries a distinct emphasis on spiritual formation, Kingdom advancement, leadership, systems, people development, and the practical expression of faith in society.',
-  'Timothy serves as the Lead Partner of The Awakening Global Agenda, a Kingdom platform committed to awakening, equipping, unifying, and mobilising people for God’s purposes across generations and territories. He is also the Family Head of The Household Church, where he provides spiritual leadership and shepherding, cultivating a family of believers committed to growing in Christ, walking in purpose, and advancing the Kingdom together.',
+  'Timothy Olugbenga is a lover of God and His Kingdom, a teacher of faith and life, and a passionate kingdom establisher and advancer. He is committed to seeing people encounter God, discover their purpose, become equipped for life and kingdom service, and participate meaningfully in God’s purposes on the earth.',
+  'Called and given to the ministry in his late teenage years. Timothy’s journey into ministry was marked by several profound experiences with God. Among these was a major encounter with Jesus in a trance-like experience, where he saw Jesus appear to him as Light. Through these and subsequent experiences, he received revelations concerning ministry, the Kingdom of God, and various expressions of God’s purpose for mankind and earth.',
+  'These encounters birthed a strong burden in him to equip people and build systems that preserve and advance faith and life. His ministry therefore carries a distinct emphasis on spiritual formation, kingdom advancement, leadership, systems, people development, and the practical expression of faith in society.',
+  'Timothy serves as the Lead Partner of The Awakening Global Agenda, a kingdom platform committed to awakening, equipping, unifying, and mobilizing people for God’s purposes across generations and territories. He is also the Family Head of The Household Church, where he provides spiritual leadership and shepherding, cultivating a family of believers committed to growing in Christ, walking in purpose, and advancing the Kingdom together.',
   'Known affectionately as “Apostle Light,” he carries a deep conviction that God has made him a light unto this generation. His ministry seeks not merely to communicate knowledge, but to illuminate people, direct destiny, establish foundations, and raise individuals who can become expressions of God’s wisdom and purpose in their generation.',
-  'He is deeply passionate about people and carries a genuine love for their growth, transformation, and fulfilment in God. His vision extends beyond the building of individuals to the building of families, communities, institutions, and systems that can faithfully carry God’s purposes from one generation to another.',
+  'He is deeply passionate about people and carries a genuine love for their growth, transformation, and fulfillment in God. His vision extends beyond the building of individuals to the building of people, families, communities, institutions, and systems that can faithfully carry God’s purposes from one generation to another.',
 ];
 
 export default function About() {
@@ -106,7 +130,7 @@ export default function About() {
       <PageBanner
         eyebrow="Who We Are"
         title="The Household"
-        blurb="A weekly teaching and apostolic platform committed to equipping people in the word of faith and establishing them in the atmosphere for life, while ushering individuals into encounters with God and the realities of Heaven."
+        blurb="A family of faith sent to Osun State, Nigeria to the world to carry the light of God and equip people for life and kingdom service."
       />
 
       {/* About — anchoring scripture */}
@@ -123,19 +147,12 @@ export default function About() {
           </Reveal>
           <Reveal delay={120}>
             <p className="mb-3 text-xs uppercase tracking-widest2 text-gold">About Us</p>
-            <h2 className="mb-4 font-display text-3xl leading-tight text-parchment md:text-4xl">
-              Many lights in the upper chamber
-            </h2>
-            <p className="mb-6 max-w-md text-sm leading-relaxed text-parchment/70">
-              The Household gathers around the teaching of the word — week after week — so that
-              faith is established, life is ordered, and people are ushered into real encounters
-              with God and the realities of Heaven.
+            <p className="mb-8 font-display text-base leading-relaxed text-parchment/90 md:text-lg">
+              The Household is a weekly teaching and apostolic platform committed to equipping
+              people in the Word of Faith and establishing them in the atmosphere for life, while
+              ushering individuals into encounters with God and the realities of Heaven.
             </p>
-            <Scripture reference="Acts 20:7-8" className="max-w-md">
-              And upon the first day of the week, when the disciples came together to break bread,
-              Paul preached unto them… And there were many lights in the upper chamber, where they
-              were gathered together.
-            </Scripture>
+            <Scripture reference="Acts 20:7-8">{ACTS}</Scripture>
           </Reveal>
         </div>
       </section>
@@ -151,29 +168,26 @@ export default function About() {
           </Reveal>
           <div className="grid gap-12 md:grid-cols-2">
             <Reveal>
-              <Scripture reference="Isaiah 49:8-9">
-                Thus saith the LORD, In an acceptable time have I heard thee, and in a day of
-                salvation have I helped thee: and I will preserve thee, and give thee for a covenant
-                of the people, to establish the earth, to cause to inherit the desolate heritages;
-                that thou mayest say to the prisoners, Go forth; to them that are in darkness, Shew
-                yourselves. They shall feed in the ways, and their pastures shall be in all high
-                places.
-              </Scripture>
+              <Scripture reference="Isaiah 49:8-9">{ISAIAH}</Scripture>
             </Reveal>
             <Reveal delay={120}>
-              <p className="mb-3 text-xs uppercase tracking-widest2 text-gold">Our Core Burden</p>
-              <p className="mb-6 text-sm leading-relaxed text-parchment/70">
+              <p className="mb-3 text-xs uppercase tracking-widest2 text-gold">Core burden</p>
+              <p className="mb-8 text-sm leading-relaxed text-parchment/70">
                 To raise and preserve a people whose faith is alive, established, uncompromised, and
                 fruitful until the return of Jesus Christ.
               </p>
+              <p className="mb-4 text-sm leading-relaxed text-parchment/70">
+                This vision is strongly anchored in Jesus&rsquo; question:
+              </p>
               <p className="mb-6 font-display text-xl leading-snug text-parchment">
-                “Nevertheless when the Son of man cometh, shall he find faith on the earth?”
-                <span className="ml-2 text-sm text-gold">— Luke 18:8</span>
+                &ldquo;Nevertheless when the Son of man cometh, shall he find faith on the
+                earth?&rdquo;
+                <span className="ml-2 text-sm text-gold">&mdash; Luke 18:8</span>
               </p>
               <p className="text-sm leading-relaxed text-parchment/70">
-                That question gives our vision its prophetic dimension. The Household exists not
-                only to build faith, but to participate in the preservation of faith on the earth
-                until Christ returns.
+                That Scripture gives the vision a profound prophetic dimension: The Household thrives
+                not only to faith, but to participate in the preservation of faith on the earth until
+                Christ returns.
               </p>
             </Reveal>
           </div>
@@ -192,9 +206,7 @@ export default function About() {
           <div className="grid gap-10 sm:grid-cols-2">
             {MISSION.map((item, i) => (
               <Reveal key={item.title} delay={i * 90} className="border-t border-gold/40 pt-6">
-                <p className="mb-2 text-xs uppercase tracking-widest2 text-gold">
-                  {String(i + 1).padStart(2, '0')}
-                </p>
+                <p className="mb-2 text-xs uppercase tracking-widest2 text-gold">{item.letter}.</p>
                 <h3 className="mb-3 font-display text-2xl leading-tight text-parchment">
                   {item.title}
                 </h3>
@@ -211,7 +223,7 @@ export default function About() {
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-widest2 text-gold">Our Mandate</p>
             <h2 className="mb-12 max-w-2xl font-display text-3xl leading-tight text-parchment md:text-4xl">
-              What we have been sent to do
+              Our mandate Is
             </h2>
           </Reveal>
           <div className="grid gap-12 md:grid-cols-2">
@@ -247,14 +259,20 @@ export default function About() {
           <Reveal>
             <p className="mb-3 text-xs uppercase tracking-widest2 text-gold">Our Story</p>
             <h2 className="mb-4 font-display text-3xl leading-tight text-parchment md:text-4xl">
-              A journey of divine sending, light, and preservation
+              A Journey of Divine Sending, Light, and Preservation
             </h2>
             <p className="mb-10 text-sm uppercase tracking-widest2 text-parchment/50">
-              This is our story
+              This Is Our Story!
             </p>
           </Reveal>
 
           {STORY.map((para, i) => (
+            <Reveal key={i}>
+              <p className="mb-6 text-sm leading-relaxed text-parchment/70">{para}</p>
+            </Reveal>
+          ))}
+
+          {STORY_2.map((para, i) => (
             <Reveal key={i} delay={i * 60}>
               <p className="mb-6 text-sm leading-relaxed text-parchment/70">{para}</p>
             </Reveal>
@@ -262,11 +280,11 @@ export default function About() {
 
           <Reveal>
             <p className="my-10 border-l border-gold/40 pl-6 font-display text-2xl leading-snug text-parchment">
-              It was more than a relocation. It was a sending.
+              It was more than a relocation, It was a sending.
             </p>
           </Reveal>
 
-          {STORY_CONTINUED.map((para, i) => (
+          {STORY_3.map((para, i) => (
             <Reveal key={i} delay={i * 60}>
               <p className="mb-6 text-sm leading-relaxed text-parchment/70">{para}</p>
             </Reveal>
@@ -274,7 +292,7 @@ export default function About() {
 
           <Reveal>
             <p className="mb-6 mt-12 text-xs uppercase tracking-widest2 text-gold">
-              Our conviction remains clear
+              Today, our conviction remains clear
             </p>
             <ul className="mb-12 space-y-4">
               {CONVICTIONS.map((line) => (
@@ -293,26 +311,19 @@ export default function About() {
           <div className="relative overflow-hidden border border-line bg-ink-soft px-6 py-16 text-center">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(200,155,60,0.18),transparent_65%)]" />
             <p className="relative font-display text-3xl leading-tight text-parchment md:text-4xl">
-              We represent light in Osun.
+              We Represent Light in Osun State, Nigeria.
             </p>
           </div>
         </Reveal>
 
         <div className="mx-auto mt-16 max-w-3xl">
+          {STORY_CLOSE.map((para, i) => (
+            <Reveal key={i} delay={i * 60}>
+              <p className="mb-6 text-sm leading-relaxed text-parchment/70">{para}</p>
+            </Reveal>
+          ))}
           <Reveal>
-            <p className="mb-6 text-sm leading-relaxed text-parchment/70">
-              Our story is therefore not simply about where we came from or where we are today. It
-              is about why we were sent. It is a story of faith in the word of God, a story of
-              obedience to divine instruction, a story of a people responding to a harvest — and a
-              story that is still being written.
-            </p>
-            <p className="mb-10 text-sm leading-relaxed text-parchment/70">
-              As we continue this journey, our prayer is that the light of God will shine brighter
-              across Osun State; that towns and villages will encounter Christ; that men and women
-              will be transformed; that leaders will be raised; that families will be strengthened;
-              and that the purposes of God concerning this territory will be fulfilled.
-            </p>
-            <p className="font-display text-2xl text-gold">We were sent!</p>
+            <p className="mt-4 font-display text-2xl text-gold">We are sent!</p>
           </Reveal>
         </div>
       </section>
@@ -359,8 +370,8 @@ export default function About() {
             There is room for you in this family
           </h2>
           <p className="mx-auto mb-7 max-w-xl text-sm leading-relaxed text-parchment/70">
-            Come and gather with us, grow in the word of faith, and take your place in what God is
-            doing across Osun and beyond.
+            Come and gather with us, grow in the Word of Faith, and take your place in what God is
+            doing across Osun State, Nigeria and beyond.
           </p>
           <a
             href="/contact"
