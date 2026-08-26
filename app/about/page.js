@@ -100,7 +100,7 @@ const STORY_3 = [
 ];
 
 const CONVICTIONS = [
-  'We are sent to Osun State, Nigeria,',
+  'We are sent through Osun State, Nigeria to the world,',
   'We believe Osun is a harvest,',
   'We believe Osun is our place of peace,',
   'We believe the light of God must shine across its towns, villages, communities, and generations,',
@@ -311,7 +311,7 @@ export default function About() {
           <div className="relative overflow-hidden border border-line bg-ink-soft px-6 py-16 text-center">
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(200,155,60,0.18),transparent_65%)]" />
             <p className="relative font-display text-3xl leading-tight text-parchment md:text-4xl">
-              We Represent Light in Osun State, Nigeria.
+              We Represent Light through Osun State, Nigeria to the World.
             </p>
           </div>
         </Reveal>
@@ -371,7 +371,7 @@ export default function About() {
           </h2>
           <p className="mx-auto mb-7 max-w-xl text-sm leading-relaxed text-parchment/70">
             Come and gather with us, grow in the Word of Faith, and take your place in what God is
-            doing across Osun State, Nigeria and beyond.
+            doing through Osun State, Nigeria to the world.
           </p>
           <a
             href="/contact"
